@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController {
+    IBOutlet UIWebView *webView;
+    IBOutlet UIBarButtonItem *backButton;
+}
+
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *backButton;
 
 @end

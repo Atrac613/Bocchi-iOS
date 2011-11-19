@@ -10,6 +10,9 @@
 
 @implementation FirstViewController
 
+@synthesize webView;
+@synthesize backButton;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -21,7 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [webView setBackgroundColor:[UIColor clearColor]];
+    [webView setOpaque:NO];
 }
 
 - (void)viewDidUnload
