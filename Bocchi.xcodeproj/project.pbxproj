@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06E27A321477C45D00F10838 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A311477C45D00F10838 /* UIKit.framework */; };
+		06E27A341477C45D00F10838 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A331477C45D00F10838 /* Foundation.framework */; };
+		06E27A361477C45D00F10838 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A351477C45D00F10838 /* CoreGraphics.framework */; };
+		06E27A3C1477C45D00F10838 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A3A1477C45D00F10838 /* InfoPlist.strings */; };
+		06E27A3E1477C45D00F10838 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27A3D1477C45D00F10838 /* main.m */; };
+		06E27A421477C45D00F10838 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27A411477C45D00F10838 /* AppDelegate.m */; };
+		06E27A451477C45D00F10838 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A431477C45D00F10838 /* MainStoryboard.storyboard */; };
+		06E27A481477C45D00F10838 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27A471477C45D00F10838 /* FirstViewController.m */; };
+		06E27A4A1477C45D00F10838 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A491477C45D00F10838 /* first.png */; };
+		06E27A4C1477C45D00F10838 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A4B1477C45D00F10838 /* first@2x.png */; };
+		06E27A4F1477C45D00F10838 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27A4E1477C45D00F10838 /* SecondViewController.m */; };
+		06E27A511477C45D00F10838 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A501477C45D00F10838 /* second.png */; };
+		06E27A531477C45D00F10838 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A521477C45D00F10838 /* second@2x.png */; };
+		06E27A5B1477C45E00F10838 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A5A1477C45E00F10838 /* SenTestingKit.framework */; };
+		06E27A5C1477C45E00F10838 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A311477C45D00F10838 /* UIKit.framework */; };
+		06E27A5D1477C45E00F10838 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A331477C45D00F10838 /* Foundation.framework */; };
+		06E27A651477C45E00F10838 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E27A631477C45E00F10838 /* InfoPlist.strings */; };
+		06E27A681477C45E00F10838 /* BocchiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27A671477C45E00F10838 /* BocchiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06E27A5E1477C45E00F10838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06E27A241477C45D00F10838 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06E27A2C1477C45D00F10838;
+			remoteInfo = Bocchi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06E27A2D1477C45D00F10838 /* Bocchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bocchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E27A311477C45D00F10838 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		06E27A331477C45D00F10838 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		06E27A351477C45D00F10838 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		06E27A391477C45D00F10838 /* Bocchi-Info.plist */ = {isa = PBXFileReference; path = "Bocchi-Info.plist"; sourceTree = "<group>"; };
+		06E27A3B1477C45D00F10838 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		06E27A3D1477C45D00F10838 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06E27A3F1477C45D00F10838 /* Bocchi-Prefix.pch */ = {isa = PBXFileReference; path = "Bocchi-Prefix.pch"; sourceTree = "<group>"; };
+		06E27A401477C45D00F10838 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		06E27A411477C45D00F10838 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06E27A441477C45D00F10838 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		06E27A461477C45D00F10838 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		06E27A471477C45D00F10838 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		06E27A491477C45D00F10838 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		06E27A4B1477C45D00F10838 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		06E27A4D1477C45D00F10838 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		06E27A4E1477C45D00F10838 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		06E27A501477C45D00F10838 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		06E27A521477C45D00F10838 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		06E27A591477C45E00F10838 /* BocchiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BocchiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E27A5A1477C45E00F10838 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		06E27A621477C45E00F10838 /* BocchiTests-Info.plist */ = {isa = PBXFileReference; path = "BocchiTests-Info.plist"; sourceTree = "<group>"; };
+		06E27A641477C45E00F10838 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		06E27A661477C45E00F10838 /* BocchiTests.h */ = {isa = PBXFileReference; path = BocchiTests.h; sourceTree = "<group>"; };
+		06E27A671477C45E00F10838 /* BocchiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BocchiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06E27A2A1477C45D00F10838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E27A321477C45D00F10838 /* UIKit.framework in Frameworks */,
+				06E27A341477C45D00F10838 /* Foundation.framework in Frameworks */,
+				06E27A361477C45D00F10838 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E27A551477C45E00F10838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E27A5B1477C45E00F10838 /* SenTestingKit.framework in Frameworks */,
+				06E27A5C1477C45E00F10838 /* UIKit.framework in Frameworks */,
+				06E27A5D1477C45E00F10838 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06E27A221477C45D00F10838 = {
+			isa = PBXGroup;
+			children = (
+				06E27A371477C45D00F10838 /* Bocchi */,
+				06E27A601477C45E00F10838 /* BocchiTests */,
+				06E27A301477C45D00F10838 /* Frameworks */,
+				06E27A2E1477C45D00F10838 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06E27A2E1477C45D00F10838 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06E27A2D1477C45D00F10838 /* Bocchi.app */,
+				06E27A591477C45E00F10838 /* BocchiTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06E27A301477C45D00F10838 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06E27A311477C45D00F10838 /* UIKit.framework */,
+				06E27A331477C45D00F10838 /* Foundation.framework */,
+				06E27A351477C45D00F10838 /* CoreGraphics.framework */,
+				06E27A5A1477C45E00F10838 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06E27A371477C45D00F10838 /* Bocchi */ = {
+			isa = PBXGroup;
+			children = (
+				06E27A401477C45D00F10838 /* AppDelegate.h */,
+				06E27A411477C45D00F10838 /* AppDelegate.m */,
+				06E27A431477C45D00F10838 /* MainStoryboard.storyboard */,
+				06E27A461477C45D00F10838 /* FirstViewController.h */,
+				06E27A471477C45D00F10838 /* FirstViewController.m */,
+				06E27A491477C45D00F10838 /* first.png */,
+				06E27A4B1477C45D00F10838 /* first@2x.png */,
+				06E27A4D1477C45D00F10838 /* SecondViewController.h */,
+				06E27A4E1477C45D00F10838 /* SecondViewController.m */,
+				06E27A501477C45D00F10838 /* second.png */,
+				06E27A521477C45D00F10838 /* second@2x.png */,
+				06E27A381477C45D00F10838 /* Supporting Files */,
+			);
+			path = Bocchi;
+			sourceTree = "<group>";
+		};
+		06E27A381477C45D00F10838 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06E27A391477C45D00F10838 /* Bocchi-Info.plist */,
+				06E27A3A1477C45D00F10838 /* InfoPlist.strings */,
+				06E27A3D1477C45D00F10838 /* main.m */,
+				06E27A3F1477C45D00F10838 /* Bocchi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06E27A601477C45E00F10838 /* BocchiTests */ = {
+			isa = PBXGroup;
+			children = (
+				06E27A661477C45E00F10838 /* BocchiTests.h */,
+				06E27A671477C45E00F10838 /* BocchiTests.m */,
+				06E27A611477C45E00F10838 /* Supporting Files */,
+			);
+			path = BocchiTests;
+			sourceTree = "<group>";
+		};
+		06E27A611477C45E00F10838 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06E27A621477C45E00F10838 /* BocchiTests-Info.plist */,
+				06E27A631477C45E00F10838 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06E27A2C1477C45D00F10838 /* Bocchi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E27A6B1477C45E00F10838 /* Build configuration list for PBXNativeTarget "Bocchi" */;
+			buildPhases = (
+				06E27A291477C45D00F10838 /* Sources */,
+				06E27A2A1477C45D00F10838 /* Frameworks */,
+				06E27A2B1477C45D00F10838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bocchi;
+			productName = Bocchi;
+			productReference = 06E27A2D1477C45D00F10838 /* Bocchi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06E27A581477C45E00F10838 /* BocchiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E27A6E1477C45E00F10838 /* Build configuration list for PBXNativeTarget "BocchiTests" */;
+			buildPhases = (
+				06E27A541477C45E00F10838 /* Sources */,
+				06E27A551477C45E00F10838 /* Frameworks */,
+				06E27A561477C45E00F10838 /* Resources */,
+				06E27A571477C45E00F10838 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06E27A5F1477C45E00F10838 /* PBXTargetDependency */,
+			);
+			name = BocchiTests;
+			productName = BocchiTests;
+			productReference = 06E27A591477C45E00F10838 /* BocchiTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06E27A241477C45D00F10838 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = atrac613.io;
+			};
+			buildConfigurationList = 06E27A271477C45D00F10838 /* Build configuration list for PBXProject "Bocchi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 06E27A221477C45D00F10838;
+			productRefGroup = 06E27A2E1477C45D00F10838 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06E27A2C1477C45D00F10838 /* Bocchi */,
+				06E27A581477C45E00F10838 /* BocchiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06E27A2B1477C45D00F10838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E27A3C1477C45D00F10838 /* InfoPlist.strings in Resources */,
+				06E27A451477C45D00F10838 /* MainStoryboard.storyboard in Resources */,
+				06E27A4A1477C45D00F10838 /* first.png in Resources */,
+				06E27A4C1477C45D00F10838 /* first@2x.png in Resources */,
+				06E27A511477C45D00F10838 /* second.png in Resources */,
+				06E27A531477C45D00F10838 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E27A561477C45E00F10838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E27A651477C45E00F10838 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06E27A571477C45E00F10838 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06E27A291477C45D00F10838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E27A3E1477C45D00F10838 /* main.m in Sources */,
+				06E27A421477C45D00F10838 /* AppDelegate.m in Sources */,
+				06E27A481477C45D00F10838 /* FirstViewController.m in Sources */,
+				06E27A4F1477C45D00F10838 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E27A541477C45E00F10838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E27A681477C45E00F10838 /* BocchiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06E27A5F1477C45E00F10838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06E27A2C1477C45D00F10838 /* Bocchi */;
+			targetProxy = 06E27A5E1477C45E00F10838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06E27A3A1477C45D00F10838 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06E27A3B1477C45D00F10838 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		06E27A431477C45D00F10838 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06E27A441477C45D00F10838 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		06E27A631477C45E00F10838 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06E27A641477C45E00F10838 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06E27A691477C45E00F10838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06E27A6A1477C45E00F10838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06E27A6C1477C45E00F10838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bocchi/Bocchi-Prefix.pch";
+				INFOPLIST_FILE = "Bocchi/Bocchi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		06E27A6D1477C45E00F10838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bocchi/Bocchi-Prefix.pch";
+				INFOPLIST_FILE = "Bocchi/Bocchi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		06E27A6F1477C45E00F10838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bocchi.app/Bocchi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bocchi/Bocchi-Prefix.pch";
+				INFOPLIST_FILE = "BocchiTests/BocchiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		06E27A701477C45E00F10838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bocchi.app/Bocchi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bocchi/Bocchi-Prefix.pch";
+				INFOPLIST_FILE = "BocchiTests/BocchiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06E27A271477C45D00F10838 /* Build configuration list for PBXProject "Bocchi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E27A691477C45E00F10838 /* Debug */,
+				06E27A6A1477C45E00F10838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06E27A6B1477C45E00F10838 /* Build configuration list for PBXNativeTarget "Bocchi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E27A6C1477C45E00F10838 /* Debug */,
+				06E27A6D1477C45E00F10838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06E27A6E1477C45E00F10838 /* Build configuration list for PBXNativeTarget "BocchiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E27A6F1477C45E00F10838 /* Debug */,
+				06E27A701477C45E00F10838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06E27A241477C45D00F10838 /* Project object */;
+}
