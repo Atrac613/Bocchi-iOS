@@ -1315,7 +1315,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1330,7 +1330,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "5FB26EB7-5CA2-436E-A191-21540F9BBF4D";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1351,7 +1352,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "5FB26EB7-5CA2-436E-A191-21540F9BBF4D";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1361,6 +1362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1374,7 +1376,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5FB26EB7-5CA2-436E-A191-21540F9BBF4D";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1396,7 +1399,7 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5FB26EB7-5CA2-436E-A191-21540F9BBF4D";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1454,6 +1457,7 @@
 				06E27A6D1477C45E00F10838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06E27A6E1477C45E00F10838 /* Build configuration list for PBXNativeTarget "BocchiTests" */ = {
 			isa = XCConfigurationList;
@@ -1462,6 +1466,7 @@
 				06E27A701477C45E00F10838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

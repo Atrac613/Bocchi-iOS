@@ -12,7 +12,6 @@
 @implementation FirstViewController
 
 @synthesize webView;
-@synthesize backButton;
 
 @synthesize pendingView;
 
@@ -30,6 +29,10 @@
     
     [webView setBackgroundColor:[UIColor clearColor]];
     [webView setOpaque:NO];
+}
+
+- (IBAction)backButtonPressed:(id)sender {
+    [webView stringByEvaluatingJavaScriptFromString: @"iui.goBack();"];
 }
 
 - (void)viewDidUnload
@@ -50,7 +53,7 @@
     if (TARGET_IPHONE_SIMULATOR) {
         url = @"http://localhost:8092/user/welcome";
     } else {
-        url = @"http://fake-notify.appspot.com/user/welcome";
+        url = @"http://bocchi-hr.appspot.com/user/welcome";
     }
     
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
@@ -106,14 +109,19 @@
         [webView setOpaque:NO];
     }
     
-	NSRange hostResult	= [url rangeOfString:@"www.fake-notify.com"];
+	NSRange hostResult	= [url rangeOfString:@"bocchi.atrac613.io"];
     
-    if ([schema isEqualToString:@"fntf"] && hostResult.location != NSNotFound) {
+    if ([schema isEqualToString:@"bocc"] && hostResult.location != NSNotFound) {
         if ([url rangeOfString:@"update/device_token"].location != NSNotFound) {
             NSLog(@"Update device_token action detected.");
             
             [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setDeviceToken('%@')", [UAirship shared].deviceToken]];
             NSLog(@"token %@", [UAirship shared].deviceToken);
+            return NO;
+        } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
+            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
+            [alert show];
+            
             return NO;
         }
     }

@@ -11,17 +11,17 @@
 
 @interface FirstViewController : UIViewController <UIWebViewDelegate> {
     IBOutlet UIWebView *webView;
-    IBOutlet UIBarButtonItem *backButton;
     
     PendingView *pendingView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *backButton;
 
 @property (nonatomic, retain) PendingView *pendingView;
 
 - (void)showPendingView;
 - (void)hidePendingView;
+
+- (IBAction)backButtonPressed:(id)sender;
 
 @end
