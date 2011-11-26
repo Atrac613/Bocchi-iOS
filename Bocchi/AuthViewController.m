@@ -1,24 +1,26 @@
 //
-//  FirstViewController.m
+//  AuthViewController.m
 //  Bocchi
 //
-//  Created by Osamu Noguchi on 11/19/11.
+//  Created by Osamu Noguchi on 11/26/11.
 //  Copyright (c) 2011 atrac613.io. All rights reserved.
 //
 
-#import "FirstViewController.h"
-#import "UAirship.h"
 #import "AuthViewController.h"
+#import "UAirship.h"
 
-@implementation FirstViewController
+@implementation AuthViewController
 
+@synthesize navigationBar;
+@synthesize navigationItem;
 @synthesize webView;
-
 @synthesize pendingView;
 
 - (void)didReceiveMemoryWarning
 {
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
+    
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -28,19 +30,11 @@
 {
     [super viewDidLoad];
     
-    [webView setBackgroundColor:[UIColor clearColor]];
-    [webView setOpaque:NO];
+    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed:)]];
 }
 
-- (IBAction)backButtonPressed:(id)sender {
-    [webView stringByEvaluatingJavaScriptFromString: @"iui.goBack();"];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+- (void)cancelButtonPressed:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -52,34 +46,14 @@
     NSString *url;
     
     if (TARGET_IPHONE_SIMULATOR) {
-        url = @"http://localhost:8092/user/welcome";
+        url = @"http://localhost:8092/user/auth";
     } else {
-        url = @"https://bocchi-hr.appspot.com/user/welcome";
+        url = @"https://bocchi-hr.appspot.com/user/auth";
     }
     
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return NO;
-}
 
 - (void)webViewDidStartLoad:(UIWebView *)wv {
     [self showPendingView];
@@ -104,11 +78,23 @@
 	NSRange hostResult	= [url rangeOfString:@"bocchi.atrac613.io"];
     
     if ([schema isEqualToString:@"bocchi"] && hostResult.location != NSNotFound) {
-        if ([url rangeOfString:@"user/auth"].location != NSNotFound) {
-            NSLog(@"Auth action detected.");
+        if ([url rangeOfString:@"update/device_token"].location != NSNotFound) {
+            NSLog(@"Update device_token action detected.");
             
-            AuthViewController *authViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AuthView"];
-            [self presentModalViewController:authViewController animated:YES];
+            [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setDeviceToken('%@')", [UAirship shared].deviceToken]];
+            NSLog(@"token %@", [UAirship shared].deviceToken);
+            
+            return NO;
+        } else if ([url rangeOfString:@"user/auth/success"].location != NSNotFound) {
+            NSLog(@"Auth Success action detected.");
+            
+            [self dismissModalViewControllerAnimated:YES];
+            
+            return NO;
+        } else if ([url rangeOfString:@"user/auth/fail"].location != NSNotFound) {
+            NSLog(@"Auth Fail action detected.");
+            
+            [self dismissModalViewControllerAnimated:YES];
             
             return NO;
         } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
@@ -139,6 +125,19 @@
         
         pendingView = nil;
     }
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

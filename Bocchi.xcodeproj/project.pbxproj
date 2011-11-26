@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06ABDCBF148103EA00BFDCFE /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ABDCBE148103E900BFDCFE /* AuthViewController.m */; };
 		06E27A321477C45D00F10838 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A311477C45D00F10838 /* UIKit.framework */; };
 		06E27A341477C45D00F10838 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A331477C45D00F10838 /* Foundation.framework */; };
 		06E27A361477C45D00F10838 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A351477C45D00F10838 /* CoreGraphics.framework */; };
@@ -150,6 +151,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06ABDCBD148103E900BFDCFE /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		06ABDCBE148103E900BFDCFE /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
 		06E27A2D1477C45D00F10838 /* Bocchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bocchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E27A311477C45D00F10838 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		06E27A331477C45D00F10838 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -489,6 +492,8 @@
 				06E27A4E1477C45D00F10838 /* SecondViewController.m */,
 				06E27A501477C45D00F10838 /* second.png */,
 				06E27A521477C45D00F10838 /* second@2x.png */,
+				06ABDCBD148103E900BFDCFE /* AuthViewController.h */,
+				06ABDCBE148103E900BFDCFE /* AuthViewController.m */,
 				06E27A381477C45D00F10838 /* Supporting Files */,
 			);
 			path = Bocchi;
@@ -1259,6 +1264,7 @@
 				06E280C61477EDD800F10838 /* UASubscriptionUI.m in Sources */,
 				06E280C71477EDD800F10838 /* UASubscriptionUIUtil.m in Sources */,
 				06E280E01477EF4400F10838 /* PendingView.m in Sources */,
+				06ABDCBF148103EA00BFDCFE /* AuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
