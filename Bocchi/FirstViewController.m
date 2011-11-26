@@ -33,7 +33,8 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender {
-    [webView stringByEvaluatingJavaScriptFromString: @"iui.goBack();"];
+    [webView goBack];
+    //[webView stringByEvaluatingJavaScriptFromString: @"iui.goBack();"];
 }
 
 - (void)viewDidUnload
