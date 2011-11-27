@@ -1,0 +1,4 @@
+"CHARGE_SUCCESS" = "Charge Success.";
+"CHARGE_FAILED" = "Tweet Failed. But Charged.";
+"CHARGE_MESSAGE" = "Bocchi Charged. #bocchi";
+"CAN_NOT_SEND_TWITTER" = "You can not Tweet.";

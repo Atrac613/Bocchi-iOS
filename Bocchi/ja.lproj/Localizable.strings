@@ -1,0 +1,4 @@
+"CHARGE_SUCCESS" = "チャージしました。";
+"CHARGE_FAILED" = "つぶやきに失敗しました。でもチャージしました。";
+"CHARGE_MESSAGE" = "ぼっちをチャージしました。 #bocchi";
+"CAN_NOT_SEND_TWITTER" = "つぶやきに失敗しました。";

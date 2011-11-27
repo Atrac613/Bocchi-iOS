@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0687F4CA1482559200B770B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687F4C91482559200B770B8 /* Twitter.framework */; };
+		0687F4CD148257B300B770B8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687F4CC148257B300B770B8 /* Accounts.framework */; };
+		0687F4D714825CCB00B770B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0687F4D514825CCB00B770B8 /* Localizable.strings */; };
+		0687F4DA14825CD400B770B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0687F4D814825CD400B770B8 /* Localizable.strings */; };
 		06ABDCBF148103EA00BFDCFE /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ABDCBE148103E900BFDCFE /* AuthViewController.m */; };
 		06E27A321477C45D00F10838 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A311477C45D00F10838 /* UIKit.framework */; };
 		06E27A341477C45D00F10838 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A331477C45D00F10838 /* Foundation.framework */; };
@@ -151,6 +155,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0687F4C91482559200B770B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		0687F4CC148257B300B770B8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		0687F4D614825CCB00B770B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Bocchi/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0687F4D914825CD400B770B8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Bocchi/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		06ABDCBD148103E900BFDCFE /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		06ABDCBE148103E900BFDCFE /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
 		06E27A2D1477C45D00F10838 /* Bocchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bocchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -419,6 +427,8 @@
 				06E280DA1477EEB600F10838 /* AudioToolbox.framework in Frameworks */,
 				06E280DB1477EEB600F10838 /* SystemConfiguration.framework in Frameworks */,
 				06E280DD1477EEEA00F10838 /* MessageUI.framework in Frameworks */,
+				0687F4CA1482559200B770B8 /* Twitter.framework in Frameworks */,
+				0687F4CD148257B300B770B8 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +445,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0687F4CE14825C7F00B770B8 /* ja.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0687F4D814825CD400B770B8 /* Localizable.strings */,
+			);
+			name = ja.lproj;
+			sourceTree = "<group>";
+		};
+		0687F4D314825CA800B770B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0687F4D414825CB500B770B8 /* en.lproj */,
+				0687F4CE14825C7F00B770B8 /* ja.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0687F4D414825CB500B770B8 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0687F4D514825CCB00B770B8 /* Localizable.strings */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
 		06E27A221477C45D00F10838 = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +478,7 @@
 				06E27A601477C45E00F10838 /* BocchiTests */,
 				06E27A301477C45D00F10838 /* Frameworks */,
 				06E27A2E1477C45D00F10838 /* Products */,
+				0687F4D314825CA800B770B8 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -458,6 +494,8 @@
 		06E27A301477C45D00F10838 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0687F4CC148257B300B770B8 /* Accounts.framework */,
+				0687F4C91482559200B770B8 /* Twitter.framework */,
 				06E280DC1477EEEA00F10838 /* MessageUI.framework */,
 				06E280D81477EEB600F10838 /* AudioToolbox.framework */,
 				06E280D91477EEB600F10838 /* SystemConfiguration.framework */,
@@ -1102,6 +1140,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = 06E27A221477C45D00F10838;
 			productRefGroup = 06E27A2E1477C45D00F10838 /* Products */;
@@ -1187,6 +1226,8 @@
 				06E280D61477EDD800F10838 /* UASubscriptionSettingsViewController.xib in Resources */,
 				06E280D71477EDD800F10838 /* UASubscriptionUserProductsViewController.xib in Resources */,
 				06E280E21477F0A900F10838 /* AirshipConfig.plist in Resources */,
+				0687F4D714825CCB00B770B8 /* Localizable.strings in Resources */,
+				0687F4DA14825CD400B770B8 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1328,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0687F4D514825CCB00B770B8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0687F4D614825CCB00B770B8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0687F4D814825CD400B770B8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0687F4D914825CD400B770B8 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		06E27A3A1477C45D00F10838 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

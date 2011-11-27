@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
+#import <Accounts/Accounts.h>
 #import "PendingView.h"
 
 @interface FirstViewController : UIViewController <UIWebViewDelegate> {
@@ -23,5 +25,8 @@
 - (void)hidePendingView;
 
 - (IBAction)backButtonPressed:(id)sender;
+
+- (void)chargeMessageTweet;
+- (void)displayText:(NSString *)text;
 
 @end
