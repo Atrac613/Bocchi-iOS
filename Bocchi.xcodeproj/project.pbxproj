@@ -142,6 +142,14 @@
 		06E280DD1477EEEA00F10838 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E280DC1477EEEA00F10838 /* MessageUI.framework */; };
 		06E280E01477EF4400F10838 /* PendingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280DF1477EF4400F10838 /* PendingView.m */; };
 		06E280E21477F0A900F10838 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06E280E11477F0A900F10838 /* AirshipConfig.plist */; };
+		06F6826414865C600015DD22 /* PurchaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826314865C600015DD22 /* PurchaseHandler.m */; };
+		06F68269148665EC0015DD22 /* BocchiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68268148665EC0015DD22 /* BocchiService.m */; };
+		06F68278148666D80015DD22 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826D148666D80015DD22 /* NSObject+SBJSON.m */; };
+		06F68279148666D80015DD22 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826F148666D80015DD22 /* NSString+SBJSON.m */; };
+		06F6827A148666D80015DD22 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68271148666D80015DD22 /* SBJSON.m */; };
+		06F6827B148666D80015DD22 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68273148666D80015DD22 /* SBJsonBase.m */; };
+		06F6827C148666D80015DD22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68275148666D80015DD22 /* SBJsonParser.m */; };
+		06F6827D148666D80015DD22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68277148666D80015DD22 /* SBJsonWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +414,23 @@
 		06E280DE1477EF4400F10838 /* PendingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingView.h; sourceTree = "<group>"; };
 		06E280DF1477EF4400F10838 /* PendingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingView.m; sourceTree = "<group>"; };
 		06E280E11477F0A900F10838 /* AirshipConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		06F6826214865C600015DD22 /* PurchaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseHandler.h; sourceTree = "<group>"; };
+		06F6826314865C600015DD22 /* PurchaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseHandler.m; sourceTree = "<group>"; };
+		06F68267148665EC0015DD22 /* BocchiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BocchiService.h; path = Service/BocchiService.h; sourceTree = "<group>"; };
+		06F68268148665EC0015DD22 /* BocchiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BocchiService.m; path = Service/BocchiService.m; sourceTree = "<group>"; };
+		06F6826B148666D80015DD22 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		06F6826C148666D80015DD22 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		06F6826D148666D80015DD22 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		06F6826E148666D80015DD22 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		06F6826F148666D80015DD22 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		06F68270148666D80015DD22 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		06F68271148666D80015DD22 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		06F68272148666D80015DD22 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		06F68273148666D80015DD22 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		06F68274148666D80015DD22 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		06F68275148666D80015DD22 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		06F68276148666D80015DD22 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		06F68277148666D80015DD22 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,6 +542,8 @@
 		06E27A371477C45D00F10838 /* Bocchi */ = {
 			isa = PBXGroup;
 			children = (
+				06F68266148665CA0015DD22 /* Service */,
+				06F6826114865C600015DD22 /* Library */,
 				06E280DE1477EF4400F10838 /* PendingView.h */,
 				06E280DF1477EF4400F10838 /* PendingView.m */,
 				06E27A401477C45D00F10838 /* AppDelegate.h */,
@@ -1086,6 +1113,45 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		06F6826114865C600015DD22 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				06F6826A148666D80015DD22 /* JSON */,
+				06F6826214865C600015DD22 /* PurchaseHandler.h */,
+				06F6826314865C600015DD22 /* PurchaseHandler.m */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		06F68266148665CA0015DD22 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				06F68267148665EC0015DD22 /* BocchiService.h */,
+				06F68268148665EC0015DD22 /* BocchiService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		06F6826A148666D80015DD22 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				06F6826B148666D80015DD22 /* JSON.h */,
+				06F6826C148666D80015DD22 /* NSObject+SBJSON.h */,
+				06F6826D148666D80015DD22 /* NSObject+SBJSON.m */,
+				06F6826E148666D80015DD22 /* NSString+SBJSON.h */,
+				06F6826F148666D80015DD22 /* NSString+SBJSON.m */,
+				06F68270148666D80015DD22 /* SBJSON.h */,
+				06F68271148666D80015DD22 /* SBJSON.m */,
+				06F68272148666D80015DD22 /* SBJsonBase.h */,
+				06F68273148666D80015DD22 /* SBJsonBase.m */,
+				06F68274148666D80015DD22 /* SBJsonParser.h */,
+				06F68275148666D80015DD22 /* SBJsonParser.m */,
+				06F68276148666D80015DD22 /* SBJsonWriter.h */,
+				06F68277148666D80015DD22 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1306,6 +1372,14 @@
 				06E280C71477EDD800F10838 /* UASubscriptionUIUtil.m in Sources */,
 				06E280E01477EF4400F10838 /* PendingView.m in Sources */,
 				06ABDCBF148103EA00BFDCFE /* AuthViewController.m in Sources */,
+				06F6826414865C600015DD22 /* PurchaseHandler.m in Sources */,
+				06F68269148665EC0015DD22 /* BocchiService.m in Sources */,
+				06F68278148666D80015DD22 /* NSObject+SBJSON.m in Sources */,
+				06F68279148666D80015DD22 /* NSString+SBJSON.m in Sources */,
+				06F6827A148666D80015DD22 /* SBJSON.m in Sources */,
+				06F6827B148666D80015DD22 /* SBJsonBase.m in Sources */,
+				06F6827C148666D80015DD22 /* SBJsonParser.m in Sources */,
+				06F6827D148666D80015DD22 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1393,8 +1467,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1415,7 +1489,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1439,8 +1513,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1462,7 +1536,7 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -9,12 +9,14 @@
 #import "FirstViewController.h"
 #import "UAirship.h"
 #import "AuthViewController.h"
+#import "AppDelegate.h"
 
 @implementation FirstViewController
 
 @synthesize webView;
-
 @synthesize pendingView;
+@synthesize currentProduct;
+@synthesize clearedForSale;
 
 - (void)didReceiveMemoryWarning
 {
@@ -95,6 +97,9 @@
 }
 
 - (BOOL)webView:(UIWebView *)wv shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    
 	NSURL *baseUrl = [request URL];
 	NSString *url = [baseUrl absoluteString];
 	NSString *schema = [baseUrl scheme];
@@ -120,6 +125,36 @@
         } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
             UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
             [alert show];
+            
+            return NO;
+        } else if ([url rangeOfString:@"item/"].location != NSNotFound) {
+            NSLog(@"Item Action Detected.");
+            NSString *product_id = [path substringFromIndex:6];
+            NSLog(@"ProductId: %@", product_id);
+            
+            if (appDelegate.isLoading || clearedForSale != YES) {
+                return NO;
+            }
+            
+            if ([appDelegate.purchaseHandler canBeginPayment]) {
+                NSLog(@"Product: %@, Title: %@, Description: %@", self.currentProduct.productIdentifier, self.currentProduct.localizedTitle, self.currentProduct.localizedDescription);
+                
+                appDelegate.isLoading = YES;
+                [appDelegate.purchaseHandler addPayment:self.currentProduct];
+                
+                [self startPendingObservation];
+            }
+            
+            return NO;
+        } else if ([url rangeOfString:@"store/view/"].location != NSNotFound) {
+            NSLog(@"View Action Detected.");
+            NSString *product_id = [path substringFromIndex:12];
+            NSLog(@"ProductId: %@", product_id);
+            
+            appDelegate.isLoading = YES;
+            
+            [appDelegate.purchaseHandler requestProductData:product_id];
+            [self startObservation];
             
             return NO;
         }
@@ -201,6 +236,73 @@
 - (void)displayText:(NSString *)text {
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:text delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
     [alert show];
+}
+
+-(void)didFinishProductRequest:(NSNotification*)notification {
+    NSArray *products = [[notification userInfo] valueForKey:@"validProducts"];
+    NSLog(@"Valid Products:%@", products);
+    
+    if ([products count] > 0) {
+        self.currentProduct = [products objectAtIndex:0];
+        
+        NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
+        [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [numberFormatter setLocale:currentProduct.priceLocale];
+        NSString *formattedPrice = [numberFormatter stringFromNumber:currentProduct.price];
+        NSLog(@"Product: %@, Title: %@, Description: %@, Price: %@", currentProduct.productIdentifier, currentProduct.localizedTitle, currentProduct.localizedDescription, formattedPrice);
+        
+        [webView stringByEvaluatingJavaScriptFromString:@"setItemStatus(1)"];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setDescription('%@')", currentProduct.localizedDescription]];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setTitle('%@')", currentProduct.localizedTitle]];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setPrice('%@')", formattedPrice]];
+        
+        clearedForSale = YES;
+    } else {
+        [webView stringByEvaluatingJavaScriptFromString:@"setItemStatus(2)"];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setTitle('%@')", @"???"]];
+        
+        clearedForSale = NO;
+    }
+    
+    [self endObservation];
+}
+
+-(void)didFinishPendingKeyRequest:(NSNotification*)notification {
+    NSString *pendingKey = [[notification userInfo] valueForKey:@"pendingKey"];
+    NSLog(@"Pending Key:%@", pendingKey);
+    
+    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"checkReceiptStatus('%@')", pendingKey]];
+    
+    [self endPendingObservation];
+}
+
+- (void)startObservation {
+    SEL sel = @selector(didFinishProductRequest:);
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:sel
+                                                 name:@"kProductRequestFinish" 
+                                               object:nil];
+}
+
+- (void)endObservation {
+    [[NSNotificationCenter defaultCenter] removeObserver:self 
+                                                    name:@"kProductRequestFinish" 
+                                                  object:nil];
+}
+
+- (void)startPendingObservation {
+    SEL sel = @selector(didFinishPendingKeyRequest:);
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:sel
+                                                 name:@"kPendingKeyRequestFinish" 
+                                               object:nil];
+}
+
+- (void)endPendingObservation {
+    [[NSNotificationCenter defaultCenter] removeObserver:self 
+                                                    name:@"kPendingKeyRequestFinish" 
+                                                  object:nil];
 }
 
 @end

@@ -14,9 +14,16 @@
 
 @synthesize window = _window;
 
+@synthesize bocchiService;
+@synthesize purchaseHandler;
+@synthesize isLoading;
+@synthesize operationQueue;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.bocchiService = [[[BocchiService alloc] init] autorelease];
     
     //Init Airship launch options
     NSMutableDictionary *takeOffOptions = [[[NSMutableDictionary alloc] init] autorelease];
@@ -31,6 +38,14 @@
     [[UAPush shared] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
                                                          UIRemoteNotificationTypeSound |
                                                          UIRemoteNotificationTypeAlert)];
+    
+    // In-app purchase
+    self.purchaseHandler = [[[PurchaseHandler alloc] init] autorelease];
+    [self.purchaseHandler initStoreKitObserver];
+    
+    // Operation queue
+	self.operationQueue	= [[[NSOperationQueue alloc] init] autorelease];
+	[self.operationQueue setMaxConcurrentOperationCount:1];
     
     return YES;
 }
@@ -124,6 +139,16 @@
     
     [[UAPush shared] handleNotification:userInfo applicationState:appState];
     [[UAPush shared] resetBadge]; // zero badge after push received
+}
+
+- (void)showDialog:(NSString *)msg {
+	UIAlertView *alert = [[[UIAlertView alloc]
+						   initWithTitle:nil
+						   message:msg
+						   delegate:self
+						   cancelButtonTitle:@"OK"
+						   otherButtonTitles:nil] autorelease];
+	[alert show];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
