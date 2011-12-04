@@ -16,7 +16,7 @@
 @end
 
 @interface PurchaseHandler : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver> {
-    id <PurchaseHandlerDelegate> delegate;
+    __unsafe_unretained id <PurchaseHandlerDelegate> delegate;
     SKProductsRequest *myRequest;
     NSArray *validProducts;
     NSString *pendingKey;

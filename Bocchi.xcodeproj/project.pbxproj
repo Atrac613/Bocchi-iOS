@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061CA463148B6369008D8647 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 061CA461148B6369008D8647 /* backbutton.png */; };
+		061CA464148B6369008D8647 /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 061CA462148B6369008D8647 /* backbutton@2x.png */; };
 		0687F4CA1482559200B770B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687F4C91482559200B770B8 /* Twitter.framework */; };
 		0687F4CD148257B300B770B8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687F4CC148257B300B770B8 /* Accounts.framework */; };
 		0687F4D714825CCB00B770B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0687F4D514825CCB00B770B8 /* Localizable.strings */; };
 		0687F4DA14825CD400B770B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0687F4D814825CD400B770B8 /* Localizable.strings */; };
+		06AB845C148B586200E484B8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AB845B148B586200E484B8 /* icon.png */; };
+		06AB845E148B586B00E484B8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AB845D148B586B00E484B8 /* icon@2x.png */; };
 		06ABDCBF148103EA00BFDCFE /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06ABDCBE148103E900BFDCFE /* AuthViewController.m */; };
 		06E27A321477C45D00F10838 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A311477C45D00F10838 /* UIKit.framework */; };
 		06E27A341477C45D00F10838 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27A331477C45D00F10838 /* Foundation.framework */; };
@@ -41,14 +45,14 @@
 		06E280751477EDD800F10838 /* libUAirship-1.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E27FD21477EDD800F10838 /* libUAirship-1.1.1.a */; };
 		06E280761477EDD800F10838 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FD31477EDD800F10838 /* LICENSE */; };
 		06E280771477EDD800F10838 /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FD41477EDD800F10838 /* README.rst */; };
-		06E280781477EDD800F10838 /* UABeveledLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FDB1477EDD800F10838 /* UABeveledLoadingIndicator.m */; };
-		06E280791477EDD800F10838 /* UAInboxAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FDD1477EDD800F10838 /* UAInboxAlertHandler.m */; };
-		06E2807A1477EDD800F10838 /* UAInboxMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FDF1477EDD800F10838 /* UAInboxMessageListCell.m */; };
-		06E2807B1477EDD800F10838 /* UAInboxMessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE11477EDD800F10838 /* UAInboxMessageListController.m */; };
-		06E2807C1477EDD800F10838 /* UAInboxMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE31477EDD800F10838 /* UAInboxMessageViewController.m */; };
-		06E2807D1477EDD800F10838 /* UAInboxNavUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE51477EDD800F10838 /* UAInboxNavUI.m */; };
-		06E2807E1477EDD800F10838 /* UAInboxOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE71477EDD800F10838 /* UAInboxOverlayController.m */; };
-		06E2807F1477EDD800F10838 /* UAInboxUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE91477EDD800F10838 /* UAInboxUI.m */; };
+		06E280781477EDD800F10838 /* UABeveledLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FDB1477EDD800F10838 /* UABeveledLoadingIndicator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280791477EDD800F10838 /* UAInboxAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FDD1477EDD800F10838 /* UAInboxAlertHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2807A1477EDD800F10838 /* UAInboxMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FDF1477EDD800F10838 /* UAInboxMessageListCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2807B1477EDD800F10838 /* UAInboxMessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE11477EDD800F10838 /* UAInboxMessageListController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2807C1477EDD800F10838 /* UAInboxMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE31477EDD800F10838 /* UAInboxMessageViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2807D1477EDD800F10838 /* UAInboxNavUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE51477EDD800F10838 /* UAInboxNavUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2807E1477EDD800F10838 /* UAInboxOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE71477EDD800F10838 /* UAInboxOverlayController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2807F1477EDD800F10838 /* UAInboxUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FE91477EDD800F10838 /* UAInboxUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06E280801477EDD800F10838 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FEC1477EDD800F10838 /* check.png */; };
 		06E280811477EDD800F10838 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FED1477EDD800F10838 /* check@2x.png */; };
 		06E280821477EDD800F10838 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FEE1477EDD800F10838 /* down.png */; };
@@ -63,15 +67,15 @@
 		06E2808B1477EDD800F10838 /* uncheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FF81477EDD800F10838 /* uncheck@2x.png */; };
 		06E2808C1477EDD800F10838 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FF91477EDD800F10838 /* up.png */; };
 		06E2808D1477EDD800F10838 /* up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E27FFA1477EDD800F10838 /* up@2x.png */; };
-		06E2808E1477EDD800F10838 /* UAPushMoreSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FFF1477EDD800F10838 /* UAPushMoreSettingsViewController.m */; };
-		06E2808F1477EDD800F10838 /* UAPushNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280011477EDD800F10838 /* UAPushNotificationHandler.m */; };
-		06E280901477EDD800F10838 /* UAPushSettingsAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280031477EDD800F10838 /* UAPushSettingsAddTagViewController.m */; };
-		06E280911477EDD800F10838 /* UAPushSettingsAliasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280051477EDD800F10838 /* UAPushSettingsAliasViewController.m */; };
-		06E280921477EDD800F10838 /* UAPushSettingsSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280071477EDD800F10838 /* UAPushSettingsSoundsViewController.m */; };
-		06E280931477EDD800F10838 /* UAPushSettingsTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280091477EDD800F10838 /* UAPushSettingsTagsViewController.m */; };
-		06E280941477EDD800F10838 /* UAPushSettingsTokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2800B1477EDD800F10838 /* UAPushSettingsTokenViewController.m */; };
-		06E280951477EDD800F10838 /* UAPushSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2800D1477EDD800F10838 /* UAPushSettingsViewController.m */; };
-		06E280961477EDD800F10838 /* UAPushUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2800F1477EDD800F10838 /* UAPushUI.m */; };
+		06E2808E1477EDD800F10838 /* UAPushMoreSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E27FFF1477EDD800F10838 /* UAPushMoreSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E2808F1477EDD800F10838 /* UAPushNotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280011477EDD800F10838 /* UAPushNotificationHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280901477EDD800F10838 /* UAPushSettingsAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280031477EDD800F10838 /* UAPushSettingsAddTagViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280911477EDD800F10838 /* UAPushSettingsAliasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280051477EDD800F10838 /* UAPushSettingsAliasViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280921477EDD800F10838 /* UAPushSettingsSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280071477EDD800F10838 /* UAPushSettingsSoundsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280931477EDD800F10838 /* UAPushSettingsTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280091477EDD800F10838 /* UAPushSettingsTagsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280941477EDD800F10838 /* UAPushSettingsTokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2800B1477EDD800F10838 /* UAPushSettingsTokenViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280951477EDD800F10838 /* UAPushSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2800D1477EDD800F10838 /* UAPushSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280961477EDD800F10838 /* UAPushUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2800F1477EDD800F10838 /* UAPushUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06E280971477EDD800F10838 /* bottom-detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E280121477EDD800F10838 /* bottom-detail.png */; };
 		06E280981477EDD800F10838 /* bottom-detail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E280131477EDD800F10838 /* bottom-detail@2x.png */; };
 		06E280991477EDD800F10838 /* middle-detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E280141477EDD800F10838 /* middle-detail.png */; };
@@ -86,17 +90,17 @@
 		06E280A21477EDD800F10838 /* UAPushSettingsTagsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E2801D1477EDD800F10838 /* UAPushSettingsTagsViewController.xib */; };
 		06E280A31477EDD800F10838 /* UAPushSettingsTokenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E2801E1477EDD800F10838 /* UAPushSettingsTokenView.xib */; };
 		06E280A41477EDD800F10838 /* UAPushSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E2801F1477EDD800F10838 /* UAPushSettingsView.xib */; };
-		06E280A51477EDD800F10838 /* UAProductDetailiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280241477EDD800F10838 /* UAProductDetailiPadViewController.m */; };
-		06E280A61477EDD800F10838 /* UAStoreFrontiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280261477EDD800F10838 /* UAStoreFrontiPadViewController.m */; };
-		06E280A71477EDD800F10838 /* UAStoreFrontSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280281477EDD800F10838 /* UAStoreFrontSplitViewController.m */; };
-		06E280A81477EDD800F10838 /* UAProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2802B1477EDD800F10838 /* UAProductDetailViewController.m */; };
+		06E280A51477EDD800F10838 /* UAProductDetailiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280241477EDD800F10838 /* UAProductDetailiPadViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280A61477EDD800F10838 /* UAStoreFrontiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280261477EDD800F10838 /* UAStoreFrontiPadViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280A71477EDD800F10838 /* UAStoreFrontSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280281477EDD800F10838 /* UAStoreFrontSplitViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280A81477EDD800F10838 /* UAProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2802B1477EDD800F10838 /* UAProductDetailViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06E280A91477EDD800F10838 /* UAPushLocalization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06E2802C1477EDD800F10838 /* UAPushLocalization.bundle */; };
-		06E280AA1477EDD800F10838 /* UAStoreFrontAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2802E1477EDD800F10838 /* UAStoreFrontAlertHandler.m */; };
-		06E280AB1477EDD800F10838 /* UAStoreFrontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280301477EDD800F10838 /* UAStoreFrontCell.m */; };
-		06E280AC1477EDD800F10838 /* UAStoreFrontCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280321477EDD800F10838 /* UAStoreFrontCellView.m */; };
-		06E280AD1477EDD800F10838 /* UAStoreFrontUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280341477EDD800F10838 /* UAStoreFrontUI.m */; };
-		06E280AE1477EDD800F10838 /* UAStoreFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280361477EDD800F10838 /* UAStoreFrontViewController.m */; };
-		06E280AF1477EDD800F10838 /* UATableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280381477EDD800F10838 /* UATableCell.m */; };
+		06E280AA1477EDD800F10838 /* UAStoreFrontAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2802E1477EDD800F10838 /* UAStoreFrontAlertHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280AB1477EDD800F10838 /* UAStoreFrontCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280301477EDD800F10838 /* UAStoreFrontCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280AC1477EDD800F10838 /* UAStoreFrontCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280321477EDD800F10838 /* UAStoreFrontCellView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280AD1477EDD800F10838 /* UAStoreFrontUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280341477EDD800F10838 /* UAStoreFrontUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280AE1477EDD800F10838 /* UAStoreFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280361477EDD800F10838 /* UAStoreFrontViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280AF1477EDD800F10838 /* UATableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280381477EDD800F10838 /* UATableCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06E280B01477EDD800F10838 /* UAProductDetailiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E2803B1477EDD800F10838 /* UAProductDetailiPad.xib */; };
 		06E280B11477EDD800F10838 /* UAStoreFrontiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E2803C1477EDD800F10838 /* UAStoreFrontiPad.xib */; };
 		06E280B21477EDD800F10838 /* accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E2803E1477EDD800F10838 /* accessory.png */; };
@@ -110,17 +114,17 @@
 		06E280BA1477EDD800F10838 /* UAProductDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E280461477EDD800F10838 /* UAProductDetail.xib */; };
 		06E280BB1477EDD800F10838 /* UAStoreFront.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E280471477EDD800F10838 /* UAStoreFront.xib */; };
 		06E280BC1477EDD800F10838 /* UAStoreFrontLocalization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06E280481477EDD800F10838 /* UAStoreFrontLocalization.bundle */; };
-		06E280BD1477EDD800F10838 /* UASubscriptionAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2804D1477EDD800F10838 /* UASubscriptionAlertHandler.m */; };
-		06E280BE1477EDD800F10838 /* UASubscriptionContentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2804F1477EDD800F10838 /* UASubscriptionContentDetailViewController.m */; };
-		06E280BF1477EDD800F10838 /* UASubscriptionContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280511477EDD800F10838 /* UASubscriptionContentsViewController.m */; };
-		06E280C01477EDD800F10838 /* UASubscriptionProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280531477EDD800F10838 /* UASubscriptionProductCell.m */; };
-		06E280C11477EDD800F10838 /* UASubscriptionProductCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280551477EDD800F10838 /* UASubscriptionProductCellView.m */; };
-		06E280C21477EDD800F10838 /* UASubscriptionProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280571477EDD800F10838 /* UASubscriptionProductDetailViewController.m */; };
-		06E280C31477EDD800F10838 /* UASubscriptionRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280591477EDD800F10838 /* UASubscriptionRootViewController.m */; };
-		06E280C41477EDD800F10838 /* UASubscriptionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2805B1477EDD800F10838 /* UASubscriptionSettingsViewController.m */; };
-		06E280C51477EDD800F10838 /* UASubscriptionTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2805D1477EDD800F10838 /* UASubscriptionTableViewDelegate.m */; };
-		06E280C61477EDD800F10838 /* UASubscriptionUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2805F1477EDD800F10838 /* UASubscriptionUI.m */; };
-		06E280C71477EDD800F10838 /* UASubscriptionUIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280611477EDD800F10838 /* UASubscriptionUIUtil.m */; };
+		06E280BD1477EDD800F10838 /* UASubscriptionAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2804D1477EDD800F10838 /* UASubscriptionAlertHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280BE1477EDD800F10838 /* UASubscriptionContentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2804F1477EDD800F10838 /* UASubscriptionContentDetailViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280BF1477EDD800F10838 /* UASubscriptionContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280511477EDD800F10838 /* UASubscriptionContentsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C01477EDD800F10838 /* UASubscriptionProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280531477EDD800F10838 /* UASubscriptionProductCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C11477EDD800F10838 /* UASubscriptionProductCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280551477EDD800F10838 /* UASubscriptionProductCellView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C21477EDD800F10838 /* UASubscriptionProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280571477EDD800F10838 /* UASubscriptionProductDetailViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C31477EDD800F10838 /* UASubscriptionRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280591477EDD800F10838 /* UASubscriptionRootViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C41477EDD800F10838 /* UASubscriptionSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2805B1477EDD800F10838 /* UASubscriptionSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C51477EDD800F10838 /* UASubscriptionTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2805D1477EDD800F10838 /* UASubscriptionTableViewDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C61477EDD800F10838 /* UASubscriptionUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E2805F1477EDD800F10838 /* UASubscriptionUI.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06E280C71477EDD800F10838 /* UASubscriptionUIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E280611477EDD800F10838 /* UASubscriptionUIUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06E280C81477EDD800F10838 /* accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E280641477EDD800F10838 /* accessory.png */; };
 		06E280C91477EDD800F10838 /* accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E280651477EDD800F10838 /* accessory@2x.png */; };
 		06E280CA1477EDD800F10838 /* detail-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E280661477EDD800F10838 /* detail-bottom.png */; };
@@ -144,12 +148,12 @@
 		06E280E21477F0A900F10838 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06E280E11477F0A900F10838 /* AirshipConfig.plist */; };
 		06F6826414865C600015DD22 /* PurchaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826314865C600015DD22 /* PurchaseHandler.m */; };
 		06F68269148665EC0015DD22 /* BocchiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68268148665EC0015DD22 /* BocchiService.m */; };
-		06F68278148666D80015DD22 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826D148666D80015DD22 /* NSObject+SBJSON.m */; };
-		06F68279148666D80015DD22 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826F148666D80015DD22 /* NSString+SBJSON.m */; };
-		06F6827A148666D80015DD22 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68271148666D80015DD22 /* SBJSON.m */; };
-		06F6827B148666D80015DD22 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68273148666D80015DD22 /* SBJsonBase.m */; };
-		06F6827C148666D80015DD22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68275148666D80015DD22 /* SBJsonParser.m */; };
-		06F6827D148666D80015DD22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68277148666D80015DD22 /* SBJsonWriter.m */; };
+		06F68278148666D80015DD22 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826D148666D80015DD22 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06F68279148666D80015DD22 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826F148666D80015DD22 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06F6827A148666D80015DD22 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68271148666D80015DD22 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06F6827B148666D80015DD22 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68273148666D80015DD22 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06F6827C148666D80015DD22 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68275148666D80015DD22 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06F6827D148666D80015DD22 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F68277148666D80015DD22 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,10 +167,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061CA461148B6369008D8647 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
+		061CA462148B6369008D8647 /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
 		0687F4C91482559200B770B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0687F4CC148257B300B770B8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0687F4D614825CCB00B770B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Bocchi/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0687F4D914825CD400B770B8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Bocchi/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06AB845B148B586200E484B8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		06AB845D148B586B00E484B8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		06ABDCBD148103E900BFDCFE /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		06ABDCBE148103E900BFDCFE /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
 		06E27A2D1477C45D00F10838 /* Bocchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bocchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,6 +478,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061CA460148B6369008D8647 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				061CA461148B6369008D8647 /* backbutton.png */,
+				061CA462148B6369008D8647 /* backbutton@2x.png */,
+			);
+			name = images;
+			path = Bocchi/images;
+			sourceTree = "<group>";
+		};
 		0687F4CE14825C7F00B770B8 /* ja.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +499,7 @@
 		0687F4D314825CA800B770B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				061CA460148B6369008D8647 /* images */,
 				0687F4D414825CB500B770B8 /* en.lproj */,
 				0687F4CE14825C7F00B770B8 /* ja.lproj */,
 			);
@@ -498,6 +517,8 @@
 		06E27A221477C45D00F10838 = {
 			isa = PBXGroup;
 			children = (
+				06AB845D148B586B00E484B8 /* icon@2x.png */,
+				06AB845B148B586200E484B8 /* icon.png */,
 				06E27F7E1477EDD800F10838 /* Airship */,
 				06E27A371477C45D00F10838 /* Bocchi */,
 				06E27A601477C45E00F10838 /* BocchiTests */,
@@ -1294,6 +1315,10 @@
 				06E280E21477F0A900F10838 /* AirshipConfig.plist in Resources */,
 				0687F4D714825CCB00B770B8 /* Localizable.strings in Resources */,
 				0687F4DA14825CD400B770B8 /* Localizable.strings in Resources */,
+				06AB845C148B586200E484B8 /* icon.png in Resources */,
+				06AB845E148B586B00E484B8 /* icon@2x.png in Resources */,
+				061CA463148B6369008D8647 /* backbutton.png in Resources */,
+				061CA464148B6369008D8647 /* backbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1450,7 +1475,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				COPY_PHASE_STRIP = NO;
@@ -1478,7 +1503,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

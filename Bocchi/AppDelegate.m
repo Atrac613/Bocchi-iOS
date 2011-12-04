@@ -23,10 +23,10 @@
 {
     // Override point for customization after application launch.
     
-    self.bocchiService = [[[BocchiService alloc] init] autorelease];
+    self.bocchiService = [[BocchiService alloc] init];
     
     //Init Airship launch options
-    NSMutableDictionary *takeOffOptions = [[[NSMutableDictionary alloc] init] autorelease];
+    NSMutableDictionary *takeOffOptions = [[NSMutableDictionary alloc] init];
     [takeOffOptions setValue:launchOptions forKey:UAirshipTakeOffOptionsLaunchOptionsKey];
     
     // Create Airship singleton that's used to talk to Urban Airhship servers.
@@ -40,11 +40,11 @@
                                                          UIRemoteNotificationTypeAlert)];
     
     // In-app purchase
-    self.purchaseHandler = [[[PurchaseHandler alloc] init] autorelease];
+    self.purchaseHandler = [[PurchaseHandler alloc] init];
     [self.purchaseHandler initStoreKitObserver];
     
     // Operation queue
-	self.operationQueue	= [[[NSOperationQueue alloc] init] autorelease];
+	self.operationQueue	= [[NSOperationQueue alloc] init];
 	[self.operationQueue setMaxConcurrentOperationCount:1];
     
     return YES;
@@ -142,12 +142,12 @@
 }
 
 - (void)showDialog:(NSString *)msg {
-	UIAlertView *alert = [[[UIAlertView alloc]
+	UIAlertView *alert = [[UIAlertView alloc]
 						   initWithTitle:nil
 						   message:msg
 						   delegate:self
 						   cancelButtonTitle:@"OK"
-						   otherButtonTitles:nil] autorelease];
+						   otherButtonTitles:nil];
 	[alert show];
 }
 							

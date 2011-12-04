@@ -18,7 +18,7 @@
 - (void)dealloc {
     self.delegate = nil;
     myRequest = nil;
-    [super dealloc];
+    //[super dealloc];
 }
 
 - (BOOL)canBeginPayment {
@@ -65,7 +65,7 @@
     
     validProducts = response.products;
     [self notifyDidReceiveProductResponse];
-    [request release];
+    //[request release];
 }
 
 // プロダクト情報リクエストが終了した事を通知する
@@ -186,12 +186,12 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    NSString *receiptStr = [[[NSString alloc] initWithData:transaction.transactionReceipt encoding:NSUTF8StringEncoding] autorelease];
+    NSString *receiptStr = [[NSString alloc] initWithData:transaction.transactionReceipt encoding:NSUTF8StringEncoding];
     
     NSLog(@"completeTransaction");
     NSLog(@"receiptStrLen: %d", [receiptStr length]);
     
-    NSInvocationOperation *operation = [[[NSInvocationOperation alloc] initWithTarget:self selector:@selector(synchronizeVerifyReceipt:) object:receiptStr] autorelease];
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(synchronizeVerifyReceipt:) object:receiptStr];
     [appDelegate.operationQueue addOperation:operation];
     
     NSLog(@"finishTransaction");

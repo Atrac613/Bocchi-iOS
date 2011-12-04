@@ -98,7 +98,7 @@
             
             return NO;
         } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
-            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
             return NO;

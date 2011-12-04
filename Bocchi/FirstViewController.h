@@ -14,6 +14,7 @@
 
 @interface FirstViewController : UIViewController <UIWebViewDelegate> {
     IBOutlet UIWebView *webView;
+    IBOutlet UINavigationItem *navigationItem;
     
     PendingView *pendingView;
     
@@ -22,6 +23,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) IBOutlet UINavigationItem *navigationItem;
 @property (nonatomic, retain) PendingView *pendingView;
 
 @property (nonatomic, retain) SKProduct *currentProduct;
@@ -30,7 +32,9 @@
 - (void)showPendingView;
 - (void)hidePendingView;
 
-- (IBAction)backButtonPressed:(id)sender;
+- (void)showBackButton;
+- (void)hideBackButton;
+- (void)backButtonPressed:(id)sender;
 
 - (void)chargeMessageTweet;
 - (void)displayText:(NSString *)text;

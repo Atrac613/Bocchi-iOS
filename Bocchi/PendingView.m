@@ -25,11 +25,11 @@
         // Initialization code
         //NSLog(@"Center: %f, %f", (self.frame.size.width/2), (self.frame.size.height/2));
         
-        pendingView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)] autorelease];
+        pendingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
         [pendingView setCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2-30)];
         [self addSubview:pendingView];
         
-        maskView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)] autorelease];
+        maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
         [maskView setBackgroundColor:[UIColor blackColor]];
         [maskView setAlpha:0.0f];
         [maskView.layer setCornerRadius:20.f];
@@ -113,6 +113,7 @@
 
 - (void)dealloc
 {
+    /*
     [super dealloc];
     
     indicatorView = nil;
@@ -124,6 +125,7 @@
     [titleLabel release];
     [maskView release];
     [pendingView release];
+    */
 }
 
 @end

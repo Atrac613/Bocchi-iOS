@@ -13,6 +13,7 @@
 
 @implementation FirstViewController
 
+@synthesize navigationItem;
 @synthesize webView;
 @synthesize pendingView;
 @synthesize currentProduct;
@@ -34,9 +35,21 @@
     [webView setOpaque:NO];
 }
 
-- (IBAction)backButtonPressed:(id)sender {
+- (void)showBackButton {
+    UIButton *customBackView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 63, 30)];
+    [customBackView setBackgroundImage:[UIImage imageNamed:@"backbutton.png"]
+                              forState:UIControlStateNormal];
+    [customBackView addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customBackView];
+    [self.navigationItem setLeftBarButtonItem:backButtonItem animated:YES];
+}
+
+- (void)hideBackButton {
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+}
+
+- (void)backButtonPressed:(id)sender {
     [webView goBack];
-    //[webView stringByEvaluatingJavaScriptFromString: @"iui.goBack();"];
 }
 
 - (void)viewDidUnload
@@ -117,13 +130,23 @@
             [self presentModalViewController:authViewController animated:YES];
             
             return NO;
+        } else if ([url rangeOfString:@"show/back_button"].location != NSNotFound) {
+            
+            [self showBackButton];
+            
+            return NO;
+        } else if ([url rangeOfString:@"hide/back_button"].location != NSNotFound) {
+            
+            [self hideBackButton];
+            
+            return NO;
         } else if ([url rangeOfString:@"store/tweet"].location != NSNotFound) {
             
             [self chargeMessageTweet];
             
             return NO;
         } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
-            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
             return NO;
@@ -228,13 +251,13 @@
         }];
 
     } else {
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"CAN_NOT_SEND_TWITTER", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"CAN_NOT_SEND_TWITTER", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
 }
 
 - (void)displayText:(NSString *)text {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"" message:text delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] autorelease];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:text delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -245,7 +268,7 @@
     if ([products count] > 0) {
         self.currentProduct = [products objectAtIndex:0];
         
-        NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
         [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
         [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
         [numberFormatter setLocale:currentProduct.priceLocale];

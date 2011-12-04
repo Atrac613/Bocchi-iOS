@@ -13,7 +13,7 @@
 @implementation BocchiService
 
 -(id)verifyReceipt:(NSString *)receiptData debug:(BOOL)debug {
-    id resultDictionary	= [[[NSDictionary alloc] init] autorelease];
+    id resultDictionary	= [[NSDictionary alloc] init];
     
     NSString *baseUrlString;
     if (TARGET_IPHONE_SIMULATOR) {
@@ -78,7 +78,7 @@
         NSException *exception = [NSException exceptionWithName:@"Exception" reason:NSLocalizedString(@"internet_error", @"") userInfo:nil];
         @throw exception;
     } else {
-        NSString *jsonData	= [[[NSString alloc] initWithData:contentData encoding:NSUTF8StringEncoding] autorelease];
+        NSString *jsonData	= [[NSString alloc] initWithData:contentData encoding:NSUTF8StringEncoding];
         NSLog(@"%@", jsonData);
         id jsonTmpDic = [jsonData JSONValue];
         
@@ -87,11 +87,11 @@
         }
         
         jsonTmpDic = nil;
-        [jsonTmpDic release];
+        //[jsonTmpDic release];
     }
     
     contentData	= nil;
-    [contentData release];
+    //[contentData release];
     
     return resultDictionary;
 }
@@ -99,7 +99,7 @@
 -(NSString *)getJsonString:(NSString *)urlString {
 	NSLog(@"urlString: %@", urlString);
 	
-	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
 	[request setURL:[NSURL URLWithString:urlString]];
 	//[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
 	[request setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
@@ -117,7 +117,7 @@
 		NSException *exception = [NSException exceptionWithName:@"Exception" reason:[error localizedDescription] userInfo:nil];
 		@throw exception;
 	} else {
-		jsonString	= [[[NSString alloc] initWithData:contentData encoding:NSUTF8StringEncoding] autorelease];
+		jsonString	= [[NSString alloc] initWithData:contentData encoding:NSUTF8StringEncoding];
 	}
 	
     NSLog(@"jsonString: %@", jsonString);
