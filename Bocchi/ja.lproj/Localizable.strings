@@ -2,3 +2,8 @@
 "CHARGE_FAILED" = "つぶやきに失敗しました。でもチャージしました。";
 "CHARGE_MESSAGE" = "ぼっちをチャージしました。 #bocchi";
 "CAN_NOT_SEND_TWITTER" = "つぶやきに失敗しました。";
+"APP_INFORMATION" = "アプリケーション情報";
+"APP_NAME" = "アプリ名";
+"VERSION" = "バージョン";
+"OTHER" = "その他";
+"TWITTER_FOLLOW" = "Twitter フォロー";
