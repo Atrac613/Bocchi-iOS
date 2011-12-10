@@ -11,6 +11,7 @@
 @implementation SecondViewController
 
 @synthesize tableView;
+@synthesize navigationItem;
 
 - (void)didReceiveMemoryWarning
 {
@@ -23,6 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationItem setTitle:NSLocalizedString(@"BOCCHI", @"")];
 }
 
 - (void)viewDidUnload

@@ -10,8 +10,10 @@
 
 @interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UITableView *tableView;
+    IBOutlet UINavigationItem *navigationItem;
 }
 
 @property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UINavigationItem *navigationItem;
 
 @end

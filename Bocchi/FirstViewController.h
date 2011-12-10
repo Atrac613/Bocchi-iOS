@@ -37,6 +37,8 @@
 - (void)backButtonPressed:(id)sender;
 
 - (void)chargeMessageTweet;
+- (void)showTweetView;
+- (void)updateNotificationCount:(NSString*)status;
 - (void)displayText:(NSString *)text;
 
 - (void)startObservation;

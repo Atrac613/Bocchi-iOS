@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     
+    [self.navigationItem setTitle:NSLocalizedString(@"AUTHENTICATION", @"")];
+    
     [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed:)]];
 }
 

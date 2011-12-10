@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     
+    [self.navigationItem setTitle:NSLocalizedString(@"BOCCHI", @"")];
+    
     [webView setBackgroundColor:[UIColor clearColor]];
     [webView setOpaque:NO];
 }
@@ -142,7 +144,7 @@
             return NO;
         } else if ([url rangeOfString:@"store/tweet"].location != NSNotFound) {
             
-            [self chargeMessageTweet];
+            [self showTweetView];
             
             return NO;
         } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
@@ -253,6 +255,53 @@
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"CAN_NOT_SEND_TWITTER", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+    }
+}
+
+- (void)showTweetView {
+    if ([TWTweetComposeViewController canSendTweet]) {
+        // Set up the built-in twitter composition view controller.
+        TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+        
+        // Set the initial tweet text. See the framework for additional properties that can be set.
+        [tweetViewController setInitialText:NSLocalizedString(@"CHARGE_MESSAGE", @"")];
+        
+        // Create the completion handler block.
+        [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
+            NSString *output;
+            
+            switch (result) {
+                case TWTweetComposeViewControllerResultCancelled:
+                    // The cancel button was tapped.
+                    output = @"cancel";
+                    break;
+                case TWTweetComposeViewControllerResultDone:
+                    // The tweet was sent.
+                    output = @"sent";
+                    break;
+                default:
+                    break;
+            }
+            
+            [self performSelectorOnMainThread:@selector(updateNotificationCount:) withObject:output waitUntilDone:NO];
+            
+            // Dismiss the tweet composition view controller.
+            [self dismissModalViewControllerAnimated:YES];
+        }];
+        
+        // Present the tweet composition view controller modally.
+        [self presentModalViewController:tweetViewController animated:YES];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"CAN_NOT_SEND_TWITTER", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+- (void)updateNotificationCount:(NSString *)status {
+    if ([status isEqualToString:@"sent"]) {
+        [webView stringByEvaluatingJavaScriptFromString:@"updateNotificationCount()"];
+    } else {
+        [self displayText:NSLocalizedString(@"TWEET_CANCELED", @"")];
     }
 }
 

@@ -13,6 +13,8 @@
 		061CA46E148B727C008D8647 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 061CA46C148B727C008D8647 /* home@2x.png */; };
 		061CA471148B74A3008D8647 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 061CA46F148B74A2008D8647 /* boy.png */; };
 		061CA472148B74A3008D8647 /* boy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 061CA470148B74A3008D8647 /* boy@2x.png */; };
+		0635E878149321AC003F5984 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0687F4D814825CD400B770B8 /* Localizable.strings */; };
+		0635E87C149321B8003F5984 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0635E87A149321B8003F5984 /* InfoPlist.strings */; };
 		0687F4CA1482559200B770B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687F4C91482559200B770B8 /* Twitter.framework */; };
 		0687F4CD148257B300B770B8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0687F4CC148257B300B770B8 /* Accounts.framework */; };
 		0687F4D714825CCB00B770B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0687F4D514825CCB00B770B8 /* Localizable.strings */; };
@@ -177,6 +179,7 @@
 		061CA46C148B727C008D8647 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		061CA46F148B74A2008D8647 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
 		061CA470148B74A3008D8647 /* boy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boy@2x.png"; sourceTree = "<group>"; };
+		0635E87B149321B8003F5984 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Bocchi/ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0687F4C91482559200B770B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0687F4CC148257B300B770B8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0687F4D614825CCB00B770B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Bocchi/en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -503,6 +506,7 @@
 		0687F4CE14825C7F00B770B8 /* ja.lproj */ = {
 			isa = PBXGroup;
 			children = (
+				0635E87A149321B8003F5984 /* InfoPlist.strings */,
 				0687F4D814825CD400B770B8 /* Localizable.strings */,
 			);
 			name = ja.lproj;
@@ -1335,6 +1339,8 @@
 				061CA46E148B727C008D8647 /* home@2x.png in Resources */,
 				061CA471148B74A3008D8647 /* boy.png in Resources */,
 				061CA472148B74A3008D8647 /* boy@2x.png in Resources */,
+				0635E878149321AC003F5984 /* Localizable.strings in Resources */,
+				0635E87C149321B8003F5984 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1443,6 +1449,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0635E87A149321B8003F5984 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0635E87B149321B8003F5984 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		0687F4D514825CCB00B770B8 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1492,8 +1506,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1508,8 +1522,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1520,7 +1534,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1530,7 +1544,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1539,8 +1553,8 @@
 		06E27A6C1477C45E00F10838 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1554,8 +1568,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1563,7 +1577,7 @@
 		06E27A6D1477C45E00F10838 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1577,7 +1591,7 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
