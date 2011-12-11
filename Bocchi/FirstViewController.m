@@ -148,7 +148,7 @@
             
             return NO;
         } else if ([url rangeOfString:@"alert/saved"].location != NSNotFound) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"SAVED", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
             return NO;
@@ -204,57 +204,6 @@
         [pendingView hidePendingView];
         
         pendingView = nil;
-    }
-}
-
-- (void)chargeMessageTweet {
-    if ([TWTweetComposeViewController canSendTweet]) {
-        
-        // Create an account store object.
-        ACAccountStore *accountStore = [[ACAccountStore alloc] init];
-        
-        // Create an account type that ensures Twitter accounts are retrieved.
-        ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-        
-        // Request access from the user to use their Twitter accounts.
-        [accountStore requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
-            if(granted) {
-                // Get the list of Twitter accounts.
-                NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
-                
-                // For the sake of brevity, we'll assume there is only one Twitter account present.
-                // You would ideally ask the user which account they want to tweet from, if there is more than one Twitter account present.
-                if ([accountsArray count] > 0) {
-                    // Grab the initial Twitter account to tweet from.
-                    ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
-                    
-                    // Create a request, which in this example, posts a tweet to the user's timeline.
-                    // This example uses version 1 of the Twitter API.
-                    // This may need to be changed to whichever version is currently appropriate.
-                    TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"] parameters:[NSDictionary dictionaryWithObject:NSLocalizedString(@"CHARGE_MESSAGE", @"") forKey:@"status"] requestMethod:TWRequestMethodPOST];
-                    
-                    // Set the account used to post the tweet.
-                    [postRequest setAccount:twitterAccount];
-                    
-                    // Perform the request created above and create a handler block to handle the response.
-                    [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-                        //NSString *output = [NSString stringWithFormat:@"HTTP response status: %i", [urlResponse statusCode]];
-                        NSString *output;
-                        if ([urlResponse statusCode] == 200) {
-                            output = NSLocalizedString(@"CHARGE_SUCCESS", @"");
-                        } else {
-                            output = NSLocalizedString(@"CHARGE_FAILED", @"");
-                        }
-                        
-                        [self performSelectorOnMainThread:@selector(displayText:) withObject:output waitUntilDone:NO];
-                    }];
-                }
-            }
-        }];
-
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"CAN_NOT_SEND_TWITTER", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
     }
 }
 

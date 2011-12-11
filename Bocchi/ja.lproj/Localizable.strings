@@ -1,6 +1,6 @@
 "CHARGE_SUCCESS" = "チャージしました。";
 "CHARGE_FAILED" = "つぶやきに失敗しました。でもチャージしました。";
-"CHARGE_MESSAGE" = "ぼっちをチャージしました。 #bocchi";
+"CHARGE_MESSAGE" = "ぼっちをチャージしました。 via @bocchi_app";
 "CAN_NOT_SEND_TWITTER" = "つぶやきに失敗しました。";
 "APP_INFORMATION" = "アプリケーション情報";
 "APP_NAME" = "アプリ名";
@@ -9,3 +9,5 @@
 "TWITTER_FOLLOW" = "Twitter フォロー";
 "BOCCHI" = "ぼっち";
 "AUTHENTICATION" = "認証";
+"SAVED" = "保存しました。";
+"TWEET_CANCELED" = "Tweet をキャンセルしました。";

@@ -1506,8 +1506,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1522,8 +1522,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1534,7 +1534,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1544,7 +1544,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1553,8 +1553,8 @@
 		06E27A6C1477C45E00F10838 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1568,8 +1568,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1577,7 +1577,7 @@
 		06E27A6D1477C45E00F10838 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (S63WC7Z3Q8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1591,7 +1591,7 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A5F27412-59D4-44A9-8C31-5B6F2345C4D6";
+				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

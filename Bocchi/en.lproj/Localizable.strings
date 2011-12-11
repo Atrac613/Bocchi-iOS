@@ -1,6 +1,6 @@
 "CHARGE_SUCCESS" = "Charge Success.";
 "CHARGE_FAILED" = "Tweet Failed. But Charged.";
-"CHARGE_MESSAGE" = "Bocchi Charged. #bocchi";
+"CHARGE_MESSAGE" = "Bocchi Charged. via @bocchi_app";
 "CAN_NOT_SEND_TWITTER" = "You can not Tweet.";
 "APP_INFORMATION" = "App Information";
 "APP_NAME" = "Name";
@@ -9,3 +9,5 @@
 "TWITTER_FOLLOW" = "Twitter Follow";
 "BOCCHI" = "Bocchi";
 "AUTHENTICATION" = "Authentication";
+"SAVED" = "Saved.";
+"TWEET_CANCELED" = "Tweet canceled.";
