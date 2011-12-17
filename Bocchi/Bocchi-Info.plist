@@ -10,7 +10,6 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>bocchi4.png</string>
 		<string>icon.png</string>
 		<string>icon@2x.png</string>
 	</array>
@@ -20,7 +19,6 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>bocchi4.png</string>
 				<string>icon.png</string>
 				<string>icon@2x.png</string>
 			</array>

@@ -1500,6 +1500,75 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		06875EBA149645D800A2CB63 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		06875EBB149645D800A2CB63 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ios-library/Airship/External\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bocchi/Bocchi-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../Airship/**";
+				INFOPLIST_FILE = "Bocchi/Bocchi-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Airship\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		06875EBC149645D800A2CB63 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bocchi.app/Bocchi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bocchi/Bocchi-Prefix.pch";
+				INFOPLIST_FILE = "BocchiTests/BocchiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 		06E27A691477C45E00F10838 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1522,8 +1591,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1534,8 +1603,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Osamu Noguchi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Osamu Noguchi";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1544,7 +1613,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1568,8 +1638,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1577,7 +1647,8 @@
 		06E27A6D1477C45E00F10838 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Osamu Noguchi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Osamu Noguchi";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1591,7 +1662,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "842A8607-78EF-4522-9025-8E3D182B0C46";
+				PROVISIONING_PROFILE = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1637,6 +1709,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06E27A691477C45E00F10838 /* Debug */,
+				06875EBA149645D800A2CB63 /* Distribution */,
 				06E27A6A1477C45E00F10838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1646,6 +1719,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06E27A6C1477C45E00F10838 /* Debug */,
+				06875EBB149645D800A2CB63 /* Distribution */,
 				06E27A6D1477C45E00F10838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1655,6 +1729,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06E27A6F1477C45E00F10838 /* Debug */,
+				06875EBC149645D800A2CB63 /* Distribution */,
 				06E27A701477C45E00F10838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
