@@ -14,6 +14,7 @@
 @implementation FirstViewController
 
 @synthesize navigationItem;
+@synthesize homeTabBarItem;
 @synthesize webView;
 @synthesize pendingView;
 @synthesize currentProduct;
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     
     [self.navigationItem setTitle:NSLocalizedString(@"BOCCHI", @"")];
+    [self.homeTabBarItem setTitle:NSLocalizedString(@"HOME", @"")];
     
     [webView setBackgroundColor:[UIColor clearColor]];
     [webView setOpaque:NO];
@@ -46,12 +48,29 @@
     [self.navigationItem setLeftBarButtonItem:backButtonItem animated:YES];
 }
 
-- (void)hideBackButton {
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+- (void)showRefreshButton {
+    UIBarButtonItem *refreshButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshButtonPressed:)];
+    [self.navigationItem setLeftBarButtonItem:refreshButtonItem animated:YES];
 }
 
 - (void)backButtonPressed:(id)sender {
     [webView goBack];
+}
+
+- (void)refreshButtonPressed:(id)sender {
+    [self refreshAction];
+}
+
+- (void)refreshAction {
+    NSString *url;
+    
+    if (TARGET_IPHONE_SIMULATOR) {
+        url = @"http://localhost:8092/user/welcome";
+    } else {
+        url = @"https://bocchi-hr.appspot.com/user/welcome";
+    }
+    
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
 - (void)viewDidUnload
@@ -67,15 +86,9 @@
     
     webView.delegate = self;
     
-    NSString *url;
+    [self refreshAction];
     
-    if (TARGET_IPHONE_SIMULATOR) {
-        url = @"http://localhost:8092/user/welcome";
-    } else {
-        url = @"https://bocchi-hr.appspot.com/user/welcome";
-    }
-    
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    [self showRefreshButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -86,6 +99,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -139,7 +154,7 @@
             return NO;
         } else if ([url rangeOfString:@"hide/back_button"].location != NSNotFound) {
             
-            [self hideBackButton];
+            [self showRefreshButton];
             
             return NO;
         } else if ([url rangeOfString:@"store/tweet"].location != NSNotFound) {

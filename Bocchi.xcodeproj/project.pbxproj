@@ -1506,8 +1506,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Osamu Noguchi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Osamu Noguchi";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1522,8 +1522,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				PROVISIONING_PROFILE = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -1531,8 +1531,8 @@
 		06875EBB149645D800A2CB63 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Osamu Noguchi (BQY439J4V9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Osamu Noguchi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Osamu Noguchi";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ios-library/Airship/External\"",
@@ -1546,8 +1546,8 @@
 					"\"$(SRCROOT)/Airship\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "299DED1E-324A-4D56-AD0F-32CA2009307D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "299DED1E-324A-4D56-AD0F-32CA2009307D";
+				PROVISIONING_PROFILE = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D06F6779-6DB4-40E7-B669-0C73F19CFB0C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
