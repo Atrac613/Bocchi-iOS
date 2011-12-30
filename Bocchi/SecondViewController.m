@@ -96,13 +96,18 @@
     
     if (indexPath.section == 0) {
         cell = [tv dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+        NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+        
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
         if (indexPath.row == 0) {
-            cell.textLabel.text = [NSString stringWithFormat:@"%@: Bocchi for iPhone", NSLocalizedString(@"APP_NAME", @"")];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@: %@ for iPhone", NSLocalizedString(@"APP_NAME", @""), name];
         } else {
-            cell.textLabel.text = [NSString stringWithFormat:@"%@: 1.0", NSLocalizedString(@"VERSION", @"")];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"VERSION", @""), version];
         }
         cell.accessoryType = UITableViewCellAccessoryNone;
     } else {
